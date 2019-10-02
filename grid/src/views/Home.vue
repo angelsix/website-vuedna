@@ -9,9 +9,9 @@
 
     <p>
       This grid has
-      <code>&lt;Grid rows="5"&gt;</code>
+      <code>&lt;Grid rows=5&gt;</code>
     </p>
-    <Grid rows="5">
+    <Grid :rows="5">
       <Column>Column</Column>
       <Column>Column</Column>
       <Column>Column</Column>
@@ -32,10 +32,10 @@
     </Grid>
 
     <Grid>
-      <Column below-desktop-width="100">below-desktop-width="100"</Column>
-      <Column below-desktop-width="100">below-desktop-width="100"</Column>
-      <Column below-laptop-width="100">below-desktop-width="100"</Column>
-      <Column below-laptop-width="100">below-desktop-width="100"</Column>
+      <Column :below-desktop-width="100">below-desktop-width=100</Column>
+      <Column :below-desktop-width="100">below-desktop-width=100</Column>
+      <Column :below-laptop-width="100">below-desktop-width=100</Column>
+      <Column :below-laptop-width="100">below-desktop-width=100</Column>
     </Grid>
 
     <Grid>

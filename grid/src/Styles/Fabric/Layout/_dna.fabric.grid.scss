@@ -160,15 +160,15 @@
 .demo-col-big {
   border: 1px dashed $color2;
   text-align: center;
-  padding: $spacing-normal;
+  padding: 1em;
   display: block;
 }
 
 .demo-col-medium {
-  padding: $spacing-large $spacing-normal;
+  padding: 2em 1em;
   border-color: orange;
 }
 .demo-col-big {
-  padding: $spacing-largest $spacing-normal;
+  padding: 3em 1em;
   border-color: yellow;
 }

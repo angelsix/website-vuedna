@@ -10,19 +10,24 @@
 /*                                                           */
 /* ######################################################### */
 
-$breakpoint-below-laptop: 'below-lap';
-$breakpoint-below-desktop: 'below-desk';
+$breakpoint-below-laptop: "below-lap";
+$breakpoint-below-desktop: "below-desk";
 
-$breakpoint-mobile: 'mob';
-$breakpoint-tablet: 'tab';
-$breakpoint-laptop: 'lap';
-$breakpoint-desktop: 'desk';
+$breakpoint-above-mobile: "above-mob";
+$breakpoint-above-tablet: "above-tab";
+
+$breakpoint-mobile: "mob";
+$breakpoint-tablet: "tab";
+$breakpoint-laptop: "lap";
+$breakpoint-desktop: "desk";
 
 $breakpoints: (
-    $breakpoint-below-desktop '(max-width: 1000px)',
-    $breakpoint-below-laptop '(max-width: 900px)',
-    $breakpoint-mobile '(max-width: 600px)',
-    $breakpoint-tablet '(min-width: 601px) and (max-width: 900px)',
-    $breakpoint-laptop '(min-width: 901px) and (max-width: 1000px)',
-    $breakpoint-desktop '(min-width: 1001px)'
-)!default;
+  $breakpoint-below-desktop "(max-width: 1000px)",
+  $breakpoint-below-laptop "(max-width: 900px)",
+  $breakpoint-mobile "(max-width: 600px)",
+  $breakpoint-above-mobile "(min-width: 601px)",
+  $breakpoint-tablet "(min-width: 601px) and (max-width: 900px)",
+  $breakpoint-above-tablet "(min-width: 901px)",
+  $breakpoint-laptop "(min-width: 901px) and (max-width: 1000px)",
+  $breakpoint-desktop "(min-width: 1001px)"
+) !default;
