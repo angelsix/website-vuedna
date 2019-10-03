@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation-menu" data-scrolldown-class="reduced">
-    <div>
+    <Wrapper>
       <div class="menu-logo">
         <img src="/assets/images/logo.png" />
       </div>
@@ -35,7 +35,7 @@
       </ul>
 
       <slot></slot>
-    </div>
+    </Wrapper>
   </nav>
 </template>
 
@@ -43,8 +43,17 @@
 import DnaCore from "@/modules/dna.core.js";
 import DnaScroll from "@/modules/dna.scroll.core.js";
 
+import Grid from "@/components/Grid.vue";
+import Column from "@/components/Column.vue";
+import Wrapper from "@/components/Wrapper.vue";
+
 export default {
   name: "NavigationMenu",
+  components: {
+    Grid,
+    Column,
+    Wrapper
+  },
   props: {
     rows: Number
   },
@@ -84,7 +93,8 @@ $menu-height: 4em;
   z-index: 1000;
 
   // Padding
-  padding: 1em 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 
   background: rgba(0, 0, 0, 0.2);
 
@@ -93,7 +103,7 @@ $menu-height: 4em;
     background-color $transition-normal;
 
   // Fixed position
-  position: fixed;
+  position: sticky;
   top: 0;
 
   // Width 100% due to fixed removing it
@@ -101,9 +111,6 @@ $menu-height: 4em;
 
   // Navigation content
   > div {
-    // Keep menu within grid width
-    max-width: $site-max-width;
-    margin: 0 auto;
 
     // Flex grid
     display: flex;

@@ -1,6 +1,17 @@
-# angelsix-vue
+# AngelSix Vue DnaGrid
 
-## Project setup
+This is a Vue component implementation of the DnaGrid for a nice grid system in Vue.js
+
+## Prerequisites
+
+1. Install Node.js from https://nodejs.org/en/download/
+2. (Optional) In command line run `npm install -g live-server` to allow simple live server of static files from command line with `live-server .` in directory of the files
+
+## Building the project
+
+Go into `grid` folder. The `project.json` file contains the npm commands. Open command line in the folder and run the following.
+
+## First build project dependencies install
 ```
 npm install
 ```

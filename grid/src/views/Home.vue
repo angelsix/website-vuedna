@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <Wrapper class="home">
     <h1>Dna Fabric Grid</h1>
     <p>
       By default, a grid with columns will have all column widths split
@@ -54,20 +54,28 @@
       Showing off the available grid column sizes, with forced no-wrap so
       content inside will hide if too long
     </p>
-  </div>
+  </Wrapper>
 </template>
 
 <script>
 // @ is an alias to /src
 import Grid from "@/components/Grid.vue";
 import Column from "@/components/Column.vue";
+import Wrapper from "@/components/Wrapper.vue";
 
 export default {
   name: "home",
   components: {
     Grid,
-    Column
-  }
+    Column,
+    Wrapper
+  },
+  mounted: () => {
+    $DnaScrollDown.Hook(50);
+  },
+  beforeDestroy: () => {
+    $DnaScrollDown.Unhook();
+  }  
 };
 </script>
 
