@@ -16,20 +16,6 @@
 //   Container
 //
 .container {
-  // A general container just adding padding around contents
-  //  * If used at root level it's full width like a banner
-  //  * If used inside something just adds nice padding
-  //
-  //  Example:
-  //  <body>
-  //    <div class="container">
-  //      <div class="wrapper">
-  //        <div class="grid"></div>
-  //      </div>
-  //    </div>
-  //  <body>
-  //
-
   // Large padding on large screens
   padding: 3em 2em;
 

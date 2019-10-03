@@ -5,7 +5,8 @@
       rows ? 'r' + rows : '',
       wrap ? 'wrap' : '',
       center ? 'center-content' : '',
-      noGutter ? 'no-gutter' : ''
+      noGutter ? 'no-gutter' : '',
+      noGrow ? 'no-grow' : ''
     ]"
   >
     <slot></slot>
@@ -24,7 +25,11 @@ export default {
     // (so fixed width columns that don't take up all the space center)
     center: Boolean,
     // To remove gutters between columns
-    noGutter: Boolean
+    noGutter: Boolean,
+    // If no grow then columns don't size to fill the width evenly
+    // and instead just take up as much room as they need
+    // Use in combination with columns fill property
+    noGrow: Boolean
   }
 };
 </script>

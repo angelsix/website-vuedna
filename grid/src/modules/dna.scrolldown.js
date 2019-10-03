@@ -1,4 +1,4 @@
-console.log("scrolldown required");
+import DnaScroll from "@/modules/dna.scroll.core.js";
 
 class DnaScrollDown {
   constructor() {
@@ -20,9 +20,9 @@ class DnaScrollDown {
     this.scrollDownItems = document.querySelectorAll("[data-scrolldown-class]");
 
     // Every time the page scrolls...
-    $DnaScroll.OnScroll(() => {
+    DnaScroll.OnScroll(() => {
       // Get scroll position
-      var windowTop = $DnaScroll.ScrollPositionY();
+      var windowTop = DnaScroll.ScrollPositionY();
 
       // If we have not scrolled down
       // and we are now scrolled down...

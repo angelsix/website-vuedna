@@ -44,10 +44,13 @@
     overflow: initial;
   }
 
-  > .col {
+  &:not(.no-grow) > .col,
+  > .col.fill {
     // Default to all columns split equal width
     flex: 1;
+  }
 
+  > .col {
     // Hide content that overflows by default
     // (so columns don't wrap to new lines)
     overflow: hidden;

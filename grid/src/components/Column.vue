@@ -6,8 +6,9 @@
         'desk-hidden': desktopHidden,
         'lap-hidden': laptopHidden,
         'tab-hidden': tabletHidden,
-        'mob-hidden': mobileHidden,
+        'mob-hidden': mobileHidden
       },
+      fill ? 'fill' : '',
       columnWidth ? 'w' + columnWidth : '',
       top ? 'align-top' : '',
       middle ? 'align-middle' : '',
@@ -21,7 +22,7 @@
       desktopWidth ? 'desk-' + desktopWidth : '',
       laptopWidth ? 'lap-' + laptopWidth : '',
       tabletWidth ? 'tab-' + tabletWidth : '',
-      mobileWidth ? 'mob-' + mobileWidth : '',
+      mobileWidth ? 'mob-' + mobileWidth : ''
     ]"
   >
     <div>
@@ -60,7 +61,10 @@ export default {
 
     // Set column width directly to any set size
     // 10 20 25 30 33 40 50 60 66 70 75 80 90 100
-    columnWidth: Number
+    columnWidth: Number,
+
+    // If true adds flex: 1 to take up any remaining space
+    fill: Boolean
   }
 };
 </script>

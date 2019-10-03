@@ -92,4 +92,4 @@ window.addEventListener("scroll", function() {
   }
 });
 
-export default {};
+export default window.$DnaScroll;

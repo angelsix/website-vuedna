@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
+    <Navigation image-path="/assets/images/logo.png">
+      <template v-slot:right>
+        <MenuList>
+          <MenuListItem url="/">Home</MenuListItem>
+          <MenuListItem url="/nav">Nav</MenuListItem>
+        </MenuList>
+      </template>
+    </Navigation>
     <router-view />
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/NavigationMenu.vue";
+import MenuList from "@/components/MenuList.vue";
+import MenuListItem from "@/components/MenuListItem.vue";
 
 export default {
   name: "app",
-  components: { Navigation },
+  components: { Navigation, MenuList, MenuListItem },
   mounted: function() {}
 };
 </script>
