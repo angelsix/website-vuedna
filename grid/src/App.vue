@@ -3,7 +3,8 @@
     <Navigation image-path="/assets/images/logo.png">
       <MenuList>
         <MenuListItem url="/">Home</MenuListItem>
-        <MenuListItem url="/nav">Nav</MenuListItem>
+        <MenuListItem url="/">About</MenuListItem>
+        <MenuListItem url="/">Services</MenuListItem>
         <MenuListItem spacer></MenuListItem>
         <MenuListItem url="/">Contact</MenuListItem>
       </MenuList>

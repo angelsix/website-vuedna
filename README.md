@@ -38,3 +38,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Deploying Live
+
+Using render.com Create a Web Service for this repository, select `Node` environment with a build command of `cd grid && npm install && npm run build` and a start command of `cd grid && node index.js`

@@ -3,9 +3,9 @@
     <Section wrap>
       <Grid no-gutter center no-grow>
         <Column class="menu-logo">
-          <a href="/">
+          <router-link to="/">
             <img :src="imagePath" />
-          </a>
+          </router-link>
         </Column>
 
         <Column fill>
