@@ -1,110 +1,109 @@
 //
 //   Box-sizing everything
 //
-*
-{
-    // Make every sizing include padding and border
-    box-sizing: border-box;
+* {
+  // Make every sizing include padding and border
+  box-sizing: border-box;
 }
 
 // For binding to the max width of the site
-.site-width
-{
-    max-width: $site-max-width;
-    margin: 0 auto;
+.site-width {
+  max-width: $site-max-width;
+  margin: 0 auto;
 }
 
 //
 //   Container
 //
-.container
-{
-    // A general container just adding padding around contents
-    //  * If used at root level it's full width like a banner
-    //  * If used inside something just adds nice padding 
-    //
-    //  Example:
-    //  <body>
-    //    <div class="container">
-    //      <div class="wrapper">
-    //        <div class="grid"></div>
-    //      </div>
-    //    </div>
-    //  <body> 
-    //
+.container {
+  // A general container just adding padding around contents
+  //  * If used at root level it's full width like a banner
+  //  * If used inside something just adds nice padding
+  //
+  //  Example:
+  //  <body>
+  //    <div class="container">
+  //      <div class="wrapper">
+  //        <div class="grid"></div>
+  //      </div>
+  //    </div>
+  //  <body>
+  //
 
-    // Large padding on large screens
-    padding: $spacing-larger $spacing-normal;
+  // Large padding on large screens
+  padding: 3em 2em;
 
-    // Smaller when screen gets smaller
-    @include media($breakpoint-mobile)
-    {
-        padding:  $spacing-large $spacing-small;
-    }
+  // Smaller when screen gets smaller
+  @include media($breakpoint-mobile) {
+    padding: 1.5em 1em;
+  }
 }
 
-.wrapper
-{
-    max-width: $site-max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+.wrapper {
+  max-width: $site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1:first-child,
+p:first-child {
+  // Push headers and paragraphs to top when they are first
+  // element in a container of any kind
+  margin-top: 0;
 }
 
 //
 //   Images by default 100% width
 //
-img
-{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 //
 //   Align Text Horizontally Center
 //
-.text-horizontal-center
-{
-    text-align: center;
-    
-    // Fix centering for display: table elements
-    margin-left: auto;
-    margin-right: auto;
+.text-horizontal-center {
+  text-align: center;
+
+  // Fix centering for display: table elements
+  margin-left: auto;
+  margin-right: auto;
 }
 
 //
 //   Align Text Horizontally Left
 //
-.text-left { text-align: left; }
+.text-left {
+  text-align: left;
+}
 
 //
 //   Align Text Horizontally Right
 //
-.text-right { text-align: right; }
+.text-right {
+  text-align: right;
+}
 
-.clearfix
-{
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 //
 //   Hide
 //
-.hidden
-{
-    display: none;
+.hidden {
+  display: none;
 }
 
 //
 //   Faded
 //
-.faded
-{
-    opacity: 0;
+.faded {
+  opacity: 0;
 }
 
 // TODO: Add vertical alignments for specific types

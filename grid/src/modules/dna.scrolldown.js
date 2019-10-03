@@ -10,6 +10,12 @@ class DnaScrollDown {
     // The number of pixels down to detect we have scrolled down from top
     this.scrollDownDetectStart = 50;
 
+    // How many more pixels needed to scroll back up to trigger up scroll
+    // This prevents the browsers micro-scrolls if the header reduces in
+    // size and causes a few pixels of scroll to happen making a constant
+    // loop of adding/removing the scorll classes
+    this.scrollBackOverdrive = 40;
+
     // Get any elements that want to listen to scroll down events
     this.scrollDownItems = document.querySelectorAll("[data-scrolldown-class]");
 
@@ -30,8 +36,12 @@ class DnaScrollDown {
           item.classList.add(item.getAttribute("data-scrolldown-class"));
         });
       }
-      // Else if we scrolled back up...
-      else if (this.scrolledDown && windowTop <= this.scrollDownDetectStart) {
+      // Else if we scrolled back up (at least 20px )...
+      else if (
+        this.scrolledDown &&
+        windowTop <=
+          Math.max(0, this.scrollDownDetectStart - this.scrollBackOverdrive)
+      ) {
         // Flag we are not scrolled down
         this.scrolledDown = false;
 
@@ -65,4 +75,4 @@ class DnaScrollDown {
 // Single global instance
 window.$DnaScrollDown = new DnaScrollDown();
 
-export default {};
+export default window.$DnaScrollDown;

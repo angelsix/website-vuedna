@@ -25,14 +25,39 @@
   }
 
   // Gutters (and bottom margin so stacked grids space with gutters on bottom)
-  margin: -1em 0 1em -1em;
+  // NOTE: This value must match column padding gutter value
+  margin: -#{$grid-gutter} 0 #{$grid-gutter} -#{$grid-gutter};
+
+  @include media($breakpoint-below-laptop) {
+    margin: -#{$grid-gutter-small} 0 #{$grid-gutter-small} -#{$grid-gutter-small};
+  }
+
+  &.no-gutter {
+    margin: 0;
+
+    > .col {
+      padding: 0;
+    }
+  }
+
+  &.wrap > .col {
+    overflow: initial;
+  }
 
   > .col {
     // Default to all columns split equal width
     flex: 1;
 
+    // Hide content that overflows by default
+    // (so columns don't wrap to new lines)
+    overflow: hidden;
+
     // Gutters
-    padding: 1em 0 0 1em;
+    padding: #{$grid-gutter} 0 0 #{$grid-gutter};
+
+    @include media($breakpoint-below-laptop) {
+      padding: #{$grid-gutter-small} 0 0 #{$grid-gutter-small};
+    }
 
     // Alignment per cell
     &.align-top {
@@ -155,20 +180,11 @@
 }
 
 // Demo column styles
-.demo-col,
-.demo-col-medium,
-.demo-col-big {
-  border: 1px dashed $color2;
-  text-align: center;
-  padding: 1em;
-  display: block;
-}
-
-.demo-col-medium {
-  padding: 2em 1em;
-  border-color: orange;
-}
-.demo-col-big {
-  padding: 3em 1em;
-  border-color: yellow;
+.demo {
+  .col:not(.no-demo) > div {
+    border: 1px dashed $color2;
+    text-align: center;
+    padding: 1em;
+    display: block;
+  }
 }

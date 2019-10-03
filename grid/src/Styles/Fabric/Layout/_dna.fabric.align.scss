@@ -1,16 +1,21 @@
 // Single item inside this element should be vertically centered
-.single-vcenter
-{
-    // Display flex
-    display: flex;
+.single-vcenter {
+  // Display flex
+  display: flex;
 
-    // Align items center vertically
-    align-items: center;
+  // Align items center vertically
+  align-items: center;
 
-    > *:first-child
-    {
-        // The first item (and should be only item)
-        // Takes up all available width (so grids work as normal)
-        flex-grow: 1;
-    }
+  > *:first-child {
+    // The first item (and should be only item)
+    // Takes up all available width (so grids work as normal)
+    flex-grow: 1;
+  }
+}
+
+// Center content vertically and horizontally
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

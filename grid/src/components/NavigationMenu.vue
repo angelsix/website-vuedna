@@ -1,41 +1,43 @@
 <template>
   <nav class="navigation-menu" data-scrolldown-class="reduced">
-    <Wrapper>
-      <div class="menu-logo">
-        <img src="/assets/images/logo.png" />
-      </div>
+    <Section wrap>
+      <div class="navigation-content">
+        <div class="menu-logo">
+          <img src="/assets/images/logo.png" />
+        </div>
 
-      <div class="menu-icon">
-        <a href="#topmenu" data-toggle-class="expanded">
-          <svg
-            height="32px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 32 32"
-            width="32px"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <path
-              d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
-            />
-          </svg>
-        </a>
-      </div>
+        <div class="menu-icon">
+          <a href="#topmenu" data-toggle-class="expanded">
+            <svg
+              height="32px"
+              id="Layer_1"
+              version="1.1"
+              viewBox="0 0 32 32"
+              width="32px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+              />
+            </svg>
+          </a>
+        </div>
 
-      <!-- Add expanded class when top menu is clicked -->
-      <ul data-topmenu-class="expanded">
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-      </ul>
+        <!-- Add expanded class when top menu is clicked -->
+        <ul data-topmenu-class="expanded">
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+        </ul>
+      </div>
 
       <slot></slot>
-    </Wrapper>
+    </Section>
   </nav>
 </template>
 
@@ -45,14 +47,14 @@ import DnaScroll from "@/modules/dna.scroll.core.js";
 
 import Grid from "@/components/Grid.vue";
 import Column from "@/components/Column.vue";
-import Wrapper from "@/components/Wrapper.vue";
+import Section from "@/components/Section.vue";
 
 export default {
   name: "NavigationMenu",
   components: {
     Grid,
     Column,
-    Wrapper
+    Section
   },
   props: {
     rows: Number
@@ -110,8 +112,7 @@ $menu-height: 4em;
   width: 100%;
 
   // Navigation content
-  > div {
-
+  .navigation-content {
     // Flex grid
     display: flex;
 
@@ -124,6 +125,9 @@ $menu-height: 4em;
 
     // Vertical align center
     align-items: center;
+
+    // Pad the sides
+    padding: 0 2em;
 
     // Menu logo
     .menu-logo {
@@ -243,6 +247,10 @@ $menu-height: 4em;
           font-size: 1.5em;
         }
 
+        &:last-child > a {
+          padding-right: 0;
+        }
+
         // Hide below laptop
         @include media($breakpoint-below-laptop) {
           float: none;
@@ -266,7 +274,10 @@ $menu-height: 4em;
     background: $color1;
 
     // Reduce padding
-    padding: 0.8em;
+    //padding: 0 0.8em;
+
+    // Smaller font
+    font-size: 0.9em;
 
     > div {
       // The logo
