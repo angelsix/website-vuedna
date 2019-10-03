@@ -44,7 +44,7 @@ export default {
     background: $color-background;
 
     // Push
-    min-width: 100%;
+    width: 100%;
 
     // Hide off to the left by default
     left: -100%;
