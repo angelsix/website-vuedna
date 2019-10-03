@@ -17,17 +17,13 @@
 import Navigation from "@/components/NavigationMenu.vue";
 import MenuList from "@/components/MenuList.vue";
 import MenuListItem from "@/components/MenuListItem.vue";
-import Grid from "@/components/Grid.vue";
-import Column from "@/components/Column.vue";
 
 export default {
   name: "app",
   components: {
     Navigation,
     MenuList,
-    MenuListItem,
-    Grid,
-    Column
+    MenuListItem
   },
   mounted: function() {}
 };

@@ -116,7 +116,7 @@ $menu-height-small: 3em;
 
   // Smaller when screen gets smaller padding
   @include media($breakpoint-mobile) {
-    padding: 0.8em 1em;
+    padding: 0em 1.5em !important;
   }
 
   .menu-icon {
