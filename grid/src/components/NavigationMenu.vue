@@ -8,14 +8,8 @@
           </a>
         </Column>
 
-        <Column>
+        <Column fill>
           <slot></slot>
-        </Column>
-
-        <Column fill></Column>
-
-        <Column>
-          <slot name="right"></slot>
         </Column>
 
         <Column class="menu-icon">

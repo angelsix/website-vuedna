@@ -1,29 +1,30 @@
 <template>
   <!-- Add expanded class when top menu is clicked -->
-  <ul class="menu" data-topmenu-class="expanded">
-    <slot>
-      <MenuListItem url="/">Home</MenuListItem>
-    </slot>
-  </ul>
+  <div class="menu" data-topmenu-class="expanded">
+    <Grid no-gutter no-grow>
+      <slot>
+        <MenuListItem url="/">Home</MenuListItem>
+      </slot>
+    </Grid>
+  </div>
 </template>
 
 <script>
+import Grid from "@/components/Grid.vue";
+import Column from "@/components/Column.vue";
 import MenuListItem from "@/components/MenuListItem.vue";
 
 export default {
   name: "MenuList",
-  components: [MenuListItem]
+  components: { Grid, Column, MenuListItem }
 };
 </script>
 
 <style lang="scss">
 // Menu items
-ul.menu {
+.menu {
   // Transition slide-in smoothly
   transition: left $transition-normal, opacity $transition-normal;
-
-  // Make horizontal menu
-  @extend .horizontal-menu;
 
   // When menu is below laptop
   @include media($breakpoint-below-laptop) {
@@ -47,42 +48,6 @@ ul.menu {
 
     // Hide off to the left by default
     left: -100%;
-  }
-
-  // For each menu item
-  > li {
-    // Display as list item
-    display: list-item;
-
-    // Float left
-    float: left;
-
-    // Set font size
-    > a {
-      // Smooth transition
-      transition: padding $transition-normal, font-size $transition-normal,
-        color $transition-normal;
-
-      // Item padding
-      padding: 0.5em 1em;
-
-      // Set font size
-      font-size: 1.5em;
-    }
-
-    // When menu is across top
-    @include media($breakpoint-above-tablet) {
-      // Remove right padding
-      &:last-child > a {
-        padding-right: 0;
-      }
-    }
-
-    // Hide below laptop
-    @include media($breakpoint-below-laptop) {
-      float: none;
-      text-align: center;
-    }
   }
 
   // When expanded show all menu items
