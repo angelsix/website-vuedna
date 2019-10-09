@@ -1,8 +1,8 @@
 <template>
-  <Section wrap pad class="about debug">
+  <Section wrap pad class="about">
     <h1>58 Signal Squadron Association</h1>
 
-    <Grid>
+    <Grid id="links">
       <Column :columnWidth="50" :belowLaptopWidth="100">
         <ImageTextBox
           class="box"
@@ -66,5 +66,15 @@ export default {
 .box {
   border: 1px solid black;
   padding: 1em;
+}
+</style>
+
+<style lang="scss">
+#links {
+  img {
+    width: auto;
+    height: 6em;
+    padding-right: 1em;
+  }
 }
 </style>

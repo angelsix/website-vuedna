@@ -2,7 +2,7 @@
   <div>
     <Grid center no-grow>
       <Column>
-        <img :src="{ imagePath }" />
+        <img :src="imagePath" />
       </Column>
       <Column fill>
         <slot></slot>
