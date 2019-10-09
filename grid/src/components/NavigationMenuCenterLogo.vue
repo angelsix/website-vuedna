@@ -1,17 +1,18 @@
 <template>
-  <nav class="navigation-menu" data-scrolldown-class="reduced">
+  <nav class="navigation-menu-center-logo" data-scrolldown-class="reduced">
     <Section wrap>
-      <Grid no-gutter center no-grow>
-        <Column class="menu-logo">
-          <router-link to="/">
-            <img :src="imagePath" />
-          </router-link>
-        </Column>
+      <div class="menu-logo" data-topmenu-class="expanded">
+        <router-link to="/">
+          <img :src="imagePath" />
+        </router-link>
+      </div>
 
-        <Column fill>
-          <MenuList>
-            <slot></slot>
-          </MenuList>
+      <Grid no-gutter no-grow>
+        <Column class="menu-slot" fill>
+          <MenuListCenter>
+            <slot name="left" slot="left"></slot>
+            <slot name="right" slot="right"></slot>
+          </MenuListCenter>
         </Column>
 
         <Column class="menu-icon">
@@ -44,15 +45,15 @@ import DnaScroll from "@/modules/dna.scroll.core.js";
 import Grid from "@/components/Grid.vue";
 import Column from "@/components/Column.vue";
 import Section from "@/components/Section.vue";
-import MenuList from "@/components/MenuList.vue";
+import MenuListCenter from "@/components/MenuListCenter.vue";
 
 export default {
-  name: "NavigationMenu",
+  name: "NavigationMenuCenterLogo",
   components: {
     Grid,
     Column,
     Section,
-    MenuList
+    MenuListCenter
   },
   props: {
     imagePath: String
@@ -96,13 +97,17 @@ export default {
 <style lang="scss" scoped>
 $menu-height: 4em;
 $menu-height-small: 3em;
+$image-height: 10em;
+$image-height-small: 2.5em;
 
-.navigation-menu {
+.navigation-menu-center-logo {
+  background: $color-royal-sky;
+
   // Keep above everything
   z-index: 1000;
 
   // Padding
-  padding: 0 2em;
+  padding: 1em 2em;
 
   // Fixed position
   position: sticky;
@@ -115,26 +120,10 @@ $menu-height-small: 3em;
   transition: padding $transition-normal, background-color $transition-normal,
     color $transition-normal, font-size $transition-normal;
 
-  // Reduce size of menu
-  &.reduced {
-    // Main background color
-    background: $color-background;
-
-    // Smaller font
-    //font-size: 0.9em;
-
-    padding: 0em 2em;
-
-    .menu-logo {
-      img {
-        height: $menu-height-small;
-      }
-    }
-  }
-
-  // Smaller when screen gets smaller padding
-  @include media($breakpoint-mobile) {
-    padding: 0em 1.5em !important;
+  // Reduce size of menu logo when scrolled or slide out menu
+  &.reduced .menu-logo a,
+  .menu-logo.expanded a {
+    transform: scale(0.35, 0.35);
   }
 
   .menu-icon {
@@ -179,28 +168,44 @@ $menu-height-small: 3em;
     }
   }
 
-  .spacer {
-    // Fill remaining menu space to push menu items to right
-    flex-grow: 1;
-  }
-
   // Menu logo
   .menu-logo {
+    // Float menu logo outside of flow so it can hang out
+    position: absolute;
+
+    // Stay at top
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+
+    // Center logo
+    text-align: center;
+
     a {
-      // Pad nothing on left (already margin from section)
+      // Padd logo all around
       padding: 1em;
-      padding-left: 0;
-      display: block;
+      display: inline-block;
+
+      // Smooth transitions
+      transition: transform $transition-normal;
+
+      // Scale from top
+      transform-origin: 50% 1em;
+
+      // Big image that overflows
+      height: $image-height;
 
       img {
-        // Smooth transitions
-        transition: height $transition-normal;
-
-        // Nice image size about 4 times that of text
-        height: $menu-height;
+        height: 100%;
         width: auto;
       }
     }
+  }
+
+  // Make menu text items smaller
+  .menu-slot {
+    font-size: 0.7em;
   }
 }
 </style>

@@ -26,10 +26,22 @@
 
   // Gutters (and bottom margin so stacked grids space with gutters on bottom)
   // NOTE: This value must match column padding gutter value
-  margin: -#{$grid-gutter} 0 #{$grid-gutter} -#{$grid-gutter};
+  margin-right: 0;
+  margin-left: -#{$grid-gutter};
+  margin-top: -#{$grid-gutter};
+
+  &:not(:last-child) {
+    margin-bottom: #{$grid-gutter};
+  }
 
   @include media($breakpoint-below-laptop) {
-    margin: -#{$grid-gutter-small} 0 #{$grid-gutter-small} -#{$grid-gutter-small};
+    margin-right: 0;
+    margin-left: -#{$grid-gutter-small};
+    margin-top: -#{$grid-gutter-small};
+
+    &:not(:last-child) {
+      margin-bottom: #{$grid-gutter-small};
+    }
   }
 
   &.no-gutter {
@@ -81,7 +93,7 @@
 }
 
 // Some set width sizes for simplicity
-@mixin grid-rows($prefix: "r") {
+@mixin grid-columns($prefix: "c") {
   .grid.#{$prefix}1 > .col {
     flex: 0 0 100%;
   }
@@ -167,7 +179,7 @@
 }
 
 // Include non-responsive grid widths
-@include grid-rows();
+@include grid-columns();
 @include grid-widths();
 
 // For each breakpoint...
@@ -178,7 +190,7 @@
   // Add media query wrapper for each breakpoint
   @include media($name) {
     @include grid-widths("#{$name}-");
-    @include grid-rows("#{$name}-");
+    @include grid-columns("#{$name}-");
   }
 }
 
@@ -189,5 +201,12 @@
     text-align: center;
     padding: 1em;
     display: block;
+  }
+}
+
+// Debug column styles
+.debug {
+  .col > div {
+    border: 1px dashed green;
   }
 }

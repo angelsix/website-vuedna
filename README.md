@@ -4,12 +4,14 @@ This is a Vue component implementation of the DnaGrid for a nice grid system in 
 
 ## Prerequisites
 
-1. Install Node.js from https://nodejs.org/en/download/
+1. Install Node.js Installer (not binary) from https://nodejs.org/en/download/
 2. (Optional) In command line run `npm install -g live-server` to allow simple live server of static files from command line with `live-server .` in directory of the files
 
 ## Building the project
 
-Go into `grid` folder. The `project.json` file contains the npm commands. Open command line in the folder and run the following.
+Go into `grid` folder (and/or open the grid folder in VS Code to work on it).
+
+The `project.json` file contains the npm commands. Open command line in the folder and run the following.
 
 ## First build project dependencies install
 ```

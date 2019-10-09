@@ -1,14 +1,20 @@
 <template>
   <!-- Add expanded class when top menu is clicked -->
-  <div :class="['menu', noRightPadding ? 'no-right-padding' : '' ]" data-topmenu-class="expanded">
-    <Grid
-      :class="[ alignRight ? 'align-right' : '', center ? 'center-content' : '' ]"
-      no-gutter
-      no-grow
-    >
-      <slot>
-        <MenuListItem url="/">Home</MenuListItem>
-      </slot>
+  <div class="menu" data-topmenu-class="expanded">
+    <Grid class="center-content" no-gutter no-grow>
+      <Column fill :below-laptop-width="100">
+        <Grid no-gutter no-grow align-right>
+          <slot name="left"></slot>
+        </Grid>
+      </Column>
+
+      <Column class="below-lap-hidden" style="width: 3em;"></Column>
+
+      <Column fill :below-laptop-width="100">
+        <Grid no-gutter no-grow>
+          <slot name="right"></slot>
+        </Grid>
+      </Column>
     </Grid>
   </div>
 </template>
@@ -19,17 +25,8 @@ import Column from "@/components/Column.vue";
 import MenuListItem from "@/components/MenuListItem.vue";
 
 export default {
-  name: "MenuList",
-  props: {
-    // If true, right-aligns the columns in this grid
-    alignRight: Boolean,
-    // If true, removes the padding from the last
-    // menu-item in the columns when above tablet
-    // TODO: Improve this with detection of "hamburger" mode
-    noRightPadding: Boolean,
-    // If true, centers the menu items in the grid
-    center: Boolean
-  },
+  name: "MenuListCenter",
+  props: {},
   components: { Grid, Column, MenuListItem }
 };
 </script>

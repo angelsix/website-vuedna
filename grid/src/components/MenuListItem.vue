@@ -1,6 +1,6 @@
 <template>
   <Column :fill="spacer" :below-laptop-width="100" class="menu-item">
-    <router-link v-if="!spacer" :to="url">
+    <router-link v-on:click.native="closeMenu" v-if="!spacer" :to="url">
       <slot></slot>
     </router-link>
   </Column>
@@ -16,6 +16,11 @@ export default {
     url: String,
     // If the column should act as a spacer to fill all unused space
     spacer: Boolean
+  },
+  methods: {
+    closeMenu: function() {
+      window.$closeMenu();
+    }
   }
 };
 </script>
@@ -44,14 +49,6 @@ export default {
     // Highlight on hover
     @include hocus() {
       color: $color-highlight;
-    }
-  }
-
-  // When menu is across top
-  @include media($breakpoint-above-tablet) {
-    // Remove right padding
-    &:last-child a {
-      padding-right: 0;
     }
   }
 
