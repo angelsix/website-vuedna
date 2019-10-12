@@ -332,3 +332,5 @@ ASALocalRun/
 package-lock.json
 
 grid/dist/
+
+Basics/static-site-webpack/dist/

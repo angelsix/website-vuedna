@@ -18,7 +18,7 @@ module.exports = {
       template: "./src/home/home.html",
       inject: true,
       chunks: ["home"],
-      filename: "index.html"
+      filename: "home.html"
     }),
     new HtmlWebpackPlugin({
       favicon: "./src/shared/images/icon.png",

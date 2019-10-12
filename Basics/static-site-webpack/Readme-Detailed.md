@@ -561,3 +561,55 @@ Inside each page folder is the page HTML itself, and the page JavaScript file. T
 For shared assets, they follow the same structure but in a folder named `shared`.
 
 > Remember to update your `package.json` to point to the new configuration file locations, your `webpack.config` files for all entry JavaScript and plugin configurations, as well as any other references in HTML, CSS and JavaScript
+
+# Express Server
+
+To improve the static website and to be able to publish it with basic routing capabilities and static files we will add an Express server.
+
+```bash
+npm i express opn
+```
+
+Now add a new file called `express.js` to the root folder
+
+```javascript
+const express = require("express");
+const path = require("path");
+const port = process.env.PORT || 8080;
+const router = express.Router();
+const app = express();
+var opn = require("opn");
+
+// Serve static files from dist folder
+app.use(express.static(__dirname + "/dist"));
+
+// NOTE: Whenever you want to add a page to the app
+//       you should add a route here to point to
+//       the generated HTML.
+//
+//       To generate the HTML add an entry and
+//       HtmlWebpackPlugin entry to the webpack.config.js
+//       file in the configuration folder
+//
+
+// Home
+router.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/home.html"));
+});
+// About
+router.get("/about", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/about.html"));
+});
+
+//add the router
+app.use("/", router);
+
+// Listen on port
+app.listen(port);
+
+console.log("Listening on http://localhost:" + port);
+
+// opens the url in the default browser
+opn("http://localhost:" + port);
+```
+
