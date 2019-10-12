@@ -1,3 +1,4 @@
+var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: "[name].[chunkhash].js",
-    path: __dirname + "/dist"
+    path: path.resolve(__dirname, "../dist")
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -17,7 +18,7 @@ module.exports = {
       template: "./src/home/home.html",
       inject: true,
       chunks: ["home"],
-      name: "home.html"
+      filename: "index.html"
     }),
     new HtmlWebpackPlugin({
       favicon: "./src/shared/images/icon.png",
