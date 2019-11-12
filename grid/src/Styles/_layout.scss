@@ -1,0 +1,64 @@
+//
+//   Box-sizing everything
+//
+* {
+    // Make every sizing include padding and border
+    box-sizing: border-box;
+}
+
+//
+//   Anchors
+//
+a {
+    // No underline
+    text-decoration: none;
+
+    // Animate color change smoothly
+    transition: color 0.7s ease;
+}
+
+body
+{
+    // Nice bit of spacing for lines
+    line-height: 1.6em;
+}
+
+// Push headers and paragraphs to top when they are first
+// element in a container of any kind
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child {
+    margin-top: 0;
+}
+
+//
+//   Images by default 100% width
+//
+img {
+    width: 100%;
+}
+
+//
+//   Hide
+//
+.hidden {
+    display: none;
+}
+
+//
+//   Faded
+//
+.faded {
+    opacity: 0;
+}
+
+// Center content vertically and horizontally
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

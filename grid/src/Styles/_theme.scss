@@ -1,0 +1,23 @@
+:root, [data-theme="default"] {
+
+    // Max site the website should expand to if in a wrapper
+    --site-max-width: 1170px;
+
+    --color-primary: red;
+    --color-background: white;
+    --color-foreground: black;
+
+    --color-nav-background: white;
+    --color-nav-link: black;
+    --color-nav-link-hover: red;   
+}
+  
+[data-theme="dark"] {
+    --color-primary: blue;
+    --color-background: black;
+    --color-foreground: white;
+
+    --color-nav-background: #444;
+    --color-nav-link: white;
+    --color-nav-link-hover: blue;   
+}

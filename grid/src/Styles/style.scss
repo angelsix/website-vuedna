@@ -1,2 +1,14 @@
-@import "Fabric/Settings/dna.fabric.settings.scss";
-@import "Fabric/dna.fabric.scss";
+@import "theme.scss";
+@import "layout.scss";
+@import "breakpoints.scss";
+
+// Dancy script font for logo
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+#app
+{
+    background: var(--color-background);
+    color: var(--color-foreground);
+
+    min-height: 100vh;
+}

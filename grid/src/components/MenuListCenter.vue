@@ -35,7 +35,7 @@ export default {
 // Menu items
 .menu {
   // Transition slide-in smoothly
-  transition: left $transition-normal, opacity $transition-normal;
+  transition: left 0.7s easeition-normal, opacity 0.7s easeition-normal;
 
   // When menu is below laptop
   @include media($breakpoint-below-laptop) {

@@ -1,17 +1,21 @@
 <template>
-  <nav class="navigation-menu" data-scrolldown-class="reduced">
+
+  <nav class="navigation-menu" :style="css" data-scrolldown-class="reduced">
+
     <Section wrap>
       <Grid no-gutter center no-grow>
         <Column class="menu-logo">
           <router-link to="/">
-            <img :src="imagePath" />
+            <img :src="content.image" />
           </router-link>
         </Column>
 
+        <Column>
+          <slot name="left"></slot>
+        </Column>
+
         <Column fill>
-          <MenuList>
-            <slot></slot>
-          </MenuList>
+          <MenuList :links="content.links" />
         </Column>
 
         <Column class="menu-icon">
@@ -45,6 +49,7 @@ import Grid from "@/components/Grid.vue";
 import Column from "@/components/Column.vue";
 import Section from "@/components/Section.vue";
 import MenuList from "@/components/MenuList.vue";
+import MenuListItem from "@/components/MenuListItem.vue";
 
 export default {
   name: "NavigationMenu",
@@ -52,10 +57,12 @@ export default {
     Grid,
     Column,
     Section,
-    MenuList
+    MenuList,
+    MenuListItem
   },
   props: {
-    imagePath: String
+    content: Object,
+    test: "white"
   },
   mounted: function() {
     window.$closeMenu = () => {
@@ -93,7 +100,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+:root
+{
+  --color-nav-background: rgba(255,255,255,1);
+  --color-nav-link: black;
+  --color-nav-link-hover: green; 
+}
+
 $menu-height: 4em;
 $menu-height-small: 3em;
 
@@ -112,13 +127,14 @@ $menu-height-small: 3em;
   width: 100%;
 
   // Smooth animations
-  transition: padding $transition-normal, background-color $transition-normal,
-    color $transition-normal, font-size $transition-normal;
+  transition: padding 0.7s ease, background-color 0.7s ease,
+    color 0.7s ease, font-size 0.7s ease;
+
+  // Background color
+  background: var(--color-nav-background);
 
   // Reduce size of menu
   &.reduced {
-    // Main background color
-    background: $color-background;
 
     // Smaller font
     //font-size: 0.9em;
@@ -137,6 +153,17 @@ $menu-height-small: 3em;
     padding: 0em 1.5em !important;
   }
 
+  .menu-item a
+  {
+      // Link color
+      color: var(--color-nav-link);
+
+      &:hover {
+        // Link color
+        color: var(--color-nav-link-hover);
+      }
+  }
+
   .menu-icon {
     // Hide by default
     @extend .hidden;
@@ -152,13 +179,13 @@ $menu-height-small: 3em;
     // Link
     a {
       // Smooth transitions
-      transition: fill $transition-normal, transform $transition-normal;
+      transition: fill 0.7s ease, transform 0.7s ease;
 
       // Padding for clickable area
       padding: 0.5em;
 
       // Icon color
-      fill: $color-foreground;
+      fill: var(--color-nav-link);
 
       // Block so its scalable
       display: block;
@@ -167,8 +194,9 @@ $menu-height-small: 3em;
       // On hover go main bright color
       &.expanded,
       &:hover {
+
         // Main bright color
-        fill: $color-highlight;
+        fill: --color-nav-link-hover;
 
         // Grow a bit
         // NOTE: Won't work on opera but its only a nice to have
@@ -194,7 +222,7 @@ $menu-height-small: 3em;
 
       img {
         // Smooth transitions
-        transition: height $transition-normal;
+        transition: height 0.7s ease;
 
         // Nice image size about 4 times that of text
         height: $menu-height;

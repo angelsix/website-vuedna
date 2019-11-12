@@ -31,8 +31,8 @@ export default {
   // Set font size
   a {
     // Smooth transition
-    transition: padding $transition-normal, font-size $transition-normal,
-      color $transition-normal;
+    transition: padding 0.7s ease, font-size 0.7s ease,
+      color 0.7s ease;
 
     // Allow padding
     display: inline-block;
@@ -44,11 +44,11 @@ export default {
     font-size: 1.4em;
 
     // White text
-    color: $color-foreground;
+    color: var(--color-foreground);
 
     // Highlight on hover
-    @include hocus() {
-      color: $color-highlight;
+    &:hover {
+      color: var(--color-primary);
     }
   }
 

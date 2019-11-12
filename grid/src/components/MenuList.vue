@@ -6,9 +6,21 @@
       no-gutter
       no-grow
     >
-      <slot>
-        <MenuListItem url="/">Home</MenuListItem>
-      </slot>
+
+      <Column fill :below-laptop-width="100">
+        <Grid no-gutter no-grow>
+          <MenuListItem v-bind:key="link.name" v-for="link in primaryLinks" :url="link.url">{{link.name}}</MenuListItem>
+        </Grid>
+      </Column>
+
+      <Column class="below-lap-hidden" style="width: 3em;"></Column>
+
+      <Column :below-laptop-width="100">
+        <Grid no-gutter no-grow>
+          <MenuListItem v-bind:key="link.name" v-for="link in secondaryLinks" :url="link.url">{{link.name}}</MenuListItem>
+        </Grid>
+      </Column>
+    
     </Grid>
   </div>
 </template>
@@ -21,6 +33,8 @@ import MenuListItem from "@/components/MenuListItem.vue";
 export default {
   name: "MenuList",
   props: {
+    // The items in the menu
+    links: Array,
     // If true, right-aligns the columns in this grid
     alignRight: Boolean,
     // If true, removes the padding from the last
@@ -30,6 +44,14 @@ export default {
     // If true, centers the menu items in the grid
     center: Boolean
   },
+  computed: {
+    primaryLinks() {
+        return this.links.filter(link => link.secondary !== true)
+    },
+    secondaryLinks() {
+        return this.links.filter(link => link.secondary === true)
+    },
+  },
   components: { Grid, Column, MenuListItem }
 };
 </script>
@@ -38,7 +60,7 @@ export default {
 // Menu items
 .menu {
   // Transition slide-in smoothly
-  transition: left $transition-normal, opacity $transition-normal;
+  transition: left 0.7s ease, opacity 0.7s ease;
 
   // When menu is below laptop
   @include media($breakpoint-below-laptop) {
@@ -55,7 +77,7 @@ export default {
     z-index: -1;
 
     // Color background
-    background: $color-background;
+    background: var(--color-background);
 
     // Push
     width: 100%;

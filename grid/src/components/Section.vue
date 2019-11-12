@@ -22,5 +22,25 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+//
+//   Container
+//
+.container {
+  // Large padding on large screens
+  padding: 2em;
+  
+  // Smaller when screen gets smaller
+  @include media($breakpoint-mobile) {
+    padding: 1.5em 1em;
+  }
+}
+
+.wrapper {
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>

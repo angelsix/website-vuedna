@@ -4,6 +4,8 @@ import router from "./router";
 // eslint-disable-next-line no-unused-vars
 import DnaScrollDown from "./modules/dna.scrolldown.js";
 
+import 'normalize.css';
+
 Vue.config.productionTip = false;
 
 // Importing the global css file

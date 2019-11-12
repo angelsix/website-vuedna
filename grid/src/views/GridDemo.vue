@@ -580,3 +580,40 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+
+textarea.codebox {
+  width: 100%;
+  height: 12em;
+  background: var(--color-foreground);
+  font-family: monospace;
+  font-size: 1.3em;
+  color: var(--color-background);
+  padding: 0.5em;
+  resize: none;
+}
+
+code {
+  padding: 0.2em;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+// Demo column styles
+.demo {
+  .col:not(.no-demo) > div {
+    border: 1px dashed rgba(218, 37, 231, 1);
+    text-align: center;
+    padding: 1em;
+    display: block;
+  }
+}
+
+// Debug column styles
+.debug {
+  .col > div {
+    border: 1px dashed green;
+  }
+}
+
+</style>

@@ -1,16 +1,11 @@
 <template>
-  <div id="app">
-    <Navigation image-path="/assets/images/royal-logo.png">
+  <div id="app" data-theme="default">
+    <Navigation :content="navigation">
       <template v-slot:left>
-        <MenuListItem url="/">Home</MenuListItem>
-        <MenuListItem url="/about">About</MenuListItem>
-        <MenuListItem url="/jimmy">Jimmys</MenuListItem>
-        <MenuListItem url="/events">Events</MenuListItem>
+        <p class="logo-text">A Chimney Sweep</p>
       </template>
       <template v-slot:right>
-        <MenuListItem url="/gallery">Gallery</MenuListItem>
-        <MenuListItem url="/association">Association Standard</MenuListItem>
-        <MenuListItem url="/contact">Contact</MenuListItem>
+        test
       </template>
     </Navigation>
 
@@ -19,7 +14,7 @@
 </template>
 
 <script>
-import Navigation from "@/components/NavigationMenuCenterLogo.vue";
+import Navigation from "@/components/NavigationMenu.vue";
 import MenuListItem from "@/components/MenuListItem.vue";
 
 export default {
@@ -27,6 +22,20 @@ export default {
   components: {
     Navigation,
     MenuListItem
+  },
+  data() {
+    return {
+      navigation: {
+        backgroundColor: "white",
+        image: "./assets/images/logo-chimney.png",
+        links: [
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about", /* secondary: true */ },
+          { name: "FAQ", url: "/faq" },
+          { name: "Testimonials", url: "/testimonials" },
+        ]
+      }
+    }
   },
   mounted: function() {}
 };
@@ -38,5 +47,15 @@ export default {
 body {
   font-family: "Quicksand", sans-serif;
 }
+
+.logo-text
+{
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 2em;
+  display: inline-block;
+}
+
 </style>
  
