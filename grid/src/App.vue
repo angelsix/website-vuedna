@@ -2,29 +2,37 @@
   <div id="app" data-theme="default">
     <Navigation :content="navigation">
       <template v-slot:left>
-        <p class="logo-text">A Chimney Sweep</p>
-      </template>
-      <template v-slot:right>
-        test
+        <p class="logo-text">{{logoText}}</p>
       </template>
     </Navigation>
 
     <router-view />
+
+    <BlockCentered class="footer">
+      <p class="companyDetails">{{companyDetails}}</p>
+    </BlockCentered>
+
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/NavigationMenu.vue";
 import MenuListItem from "@/components/MenuListItem.vue";
+import Section from "@/components/Section.vue";
+import BlockCentered from "@/components/blocks/BlockCentered.vue";
 
 export default {
   name: "app",
   components: {
     Navigation,
-    MenuListItem
+    MenuListItem,
+    Section,
+    BlockCentered
   },
   data() {
     return {
+      companyDetails: "A Chimney Sweep Ltd. Registered Office: 14 Sycamore Road, Stone, Staffordshire ST15 8NJ. Registered in England and Wales No. 10100630. ©2019 A Chimney Sweep. All Rights Reserved.",
+      logoText: "A Chimney Sweep",
       navigation: {
         backgroundColor: "white",
         image: "./assets/images/logo-chimney.png",
@@ -42,11 +50,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
-
-body {
-  font-family: "Quicksand", sans-serif;
-}
 
 .logo-text
 {
@@ -55,6 +58,15 @@ body {
   color: var(--color-primary);
   font-size: 2em;
   display: inline-block;
+}
+
+.footer
+{
+  .companyDetails
+  {
+    font-size: 0.8em;
+    color: var(--color-foreground-lighter);
+  }
 }
 
 </style>

@@ -3,6 +3,7 @@
     <div v-if="wrap" class="wrapper">
       <slot></slot>
     </div>
+    <slot v-else></slot>
   </div>
   <div v-else-if="wrap" class="wrapper">
     <slot></slot>

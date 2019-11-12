@@ -18,6 +18,10 @@
           <MenuList :links="content.links" />
         </Column>
 
+        <Column>
+          <slot name="right"></slot>
+        </Column>
+
         <Column class="menu-icon">
           <a ref="expand" href="#" data-toggle-class="expanded">
             <svg

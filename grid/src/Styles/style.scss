@@ -5,6 +5,13 @@
 // Dancy script font for logo
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
+
+body
+{
+    font-family: 'Yeon Sung', cursive;
+}
+
 #app
 {
     background: var(--color-background);
