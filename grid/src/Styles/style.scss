@@ -30,3 +30,36 @@ p
     margin-bottom: 0.2em;
     padding: 0 1em;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+    background: red; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: orange; 
+  }
+
+  .about .text-image-side-by
+  {
+    // Let box shadow come out
+    .col { overflow: visible; }
+
+    img 
+    {
+      border-radius: 2em;
+      box-shadow: 0 0 1em red;
+    }
+  }

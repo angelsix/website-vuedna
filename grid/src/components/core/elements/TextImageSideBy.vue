@@ -1,5 +1,5 @@
 <template>
-    <Grid no-gutter>
+    <Grid no-gutter class="text-image-side-by">
       <Column :column-width="66" :below-laptop-width="100">
         <div  class="text">
             <slot></slot>

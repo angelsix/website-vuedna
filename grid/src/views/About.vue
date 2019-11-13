@@ -1,6 +1,6 @@
 
 <template>
-  <Section wrap pad center>
+  <Section wrap pad center class="about">
     <GradientUnderline>
       <h1>{{aboutHeaderText}}</h1>
     </GradientUnderline>
