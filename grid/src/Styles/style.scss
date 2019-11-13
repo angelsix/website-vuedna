@@ -12,10 +12,21 @@ body
     font-family: 'Yeon Sung', cursive;
 }
 
+p
+{
+    font-size: 1.2em;
+}
+
 #app
 {
     background: var(--color-background);
     color: var(--color-foreground);
 
     min-height: 100vh;
+}
+
+.underline h1
+{
+    margin-bottom: 0.2em;
+    padding: 0 1em;
 }

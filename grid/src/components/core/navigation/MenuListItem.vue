@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Column from "@/components/Column.vue";
+import Column from "@/components/core/layout/Column.vue";
 
 export default {
   name: "MenuListItem",

@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import Grid from "@/components/Grid.vue";
-import Column from "@/components/Column.vue";
-import MenuListItem from "@/components/MenuListItem.vue";
+import Grid from "@/components/core/layout/Grid.vue";
+import Column from "@/components/core/layout/Column.vue";
+import MenuListItem from "@/components/core/navigation/MenuListItem.vue";
 
 export default {
   name: "MenuList",

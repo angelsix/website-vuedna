@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="navigation-menu" :style="css" data-scrolldown-class="reduced">
+  <nav class="navigation-menu" data-scrolldown-class="reduced">
 
     <Section wrap>
       <Grid no-gutter center no-grow>
@@ -49,11 +49,11 @@
 import DnaCore from "@/modules/dna.core.js";
 import DnaScroll from "@/modules/dna.scroll.core.js";
 
-import Grid from "@/components/Grid.vue";
-import Column from "@/components/Column.vue";
-import Section from "@/components/Section.vue";
-import MenuList from "@/components/MenuList.vue";
-import MenuListItem from "@/components/MenuListItem.vue";
+import Grid from "@/components/core/layout/Grid.vue";
+import Column from "@/components/core/layout/Column.vue";
+import Section from "@/components/core/blocks/Section.vue";
+import MenuList from "@/components/core/navigation/MenuList.vue";
+import MenuListItem from "@/components/core/navigation/MenuListItem.vue";
 
 export default {
   name: "NavigationMenu",

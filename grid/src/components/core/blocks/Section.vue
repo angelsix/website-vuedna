@@ -1,15 +1,17 @@
 <template>
-  <div v-if="pad" class="container">
-    <div v-if="wrap" class="wrapper">
+  <div :class="[ center ? 'center-text' : '' ]">
+    <div v-if="pad" class="container">
+      <div v-if="wrap" class="wrapper">
+        <slot></slot>
+      </div>
+      <slot v-else></slot>
+    </div>
+    <div v-else-if="wrap" class="wrapper">
       <slot></slot>
     </div>
-    <slot v-else></slot>
-  </div>
-  <div v-else-if="wrap" class="wrapper">
-    <slot></slot>
-  </div>
-  <div v-else>
-    <slot></slot>
+    <div v-else>
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -18,7 +20,8 @@ export default {
   name: "Section",
   props: {
     wrap: Boolean,
-    pad: Boolean
+    pad: Boolean,
+    center: Boolean
   }
 };
 </script>

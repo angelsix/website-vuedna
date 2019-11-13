@@ -560,9 +560,9 @@
 
 <script>
 // @ is an alias to /src
-import Grid from "@/components/Grid.vue";
-import Column from "@/components/Column.vue";
-import Section from "@/components/Section.vue";
+import Grid from "@/components/core/layout/Grid.vue";
+import Column from "@/components/core/layout/Column.vue";
+import Section from "@/components/core/blocks/Section.vue";
 import DnaScrollDown from "@/modules/dna.scrolldown.js";
 
 export default {

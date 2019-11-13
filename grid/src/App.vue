@@ -8,18 +8,18 @@
 
     <router-view />
 
-    <BlockCentered class="footer">
+    <Section pad wrap class="footer center-text">
       <p class="companyDetails">{{companyDetails}}</p>
-    </BlockCentered>
+    </Section>
 
   </div>
 </template>
 
 <script>
-import Navigation from "@/components/NavigationMenu.vue";
-import MenuListItem from "@/components/MenuListItem.vue";
-import Section from "@/components/Section.vue";
-import BlockCentered from "@/components/blocks/BlockCentered.vue";
+import Navigation from "@/components/core/navigation/NavigationMenu.vue";
+import MenuListItem from "@/components/core/navigation/MenuListItem.vue";
+import Section from "@/components/core/blocks/Section.vue";
+import BlockCentered from "@/components/core/blocks/BlockCentered.vue";
 
 export default {
   name: "app",
