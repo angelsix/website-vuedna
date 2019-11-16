@@ -1,6 +1,6 @@
 <template>
-  <ShadowBox>
-      <Section wrap pad class="center-content">
+  <ShadowBox :fullHeight="fullHeight">
+      <Section pad class="center-content">
            <a :href="imageUrl"><img class="image" :src="imagePath" /></a>
  
           <h1>{{title}}</h1>
@@ -26,6 +26,7 @@ export default {
     imageWidth: String,
     title: String,
     buttonText: String,
+    fullHeight: Boolean
   }
 };
 </script>

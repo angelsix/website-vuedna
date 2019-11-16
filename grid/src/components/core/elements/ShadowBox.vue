@@ -1,5 +1,5 @@
 <template>
-    <div class="box"><slot></slot></div>
+    <div  :class="[ 'box', { fullHeight: fullHeight } ]"><div><slot></slot></div></div>
 </template>
 
 <script>
@@ -8,16 +8,25 @@ export default {
   components: {
   },
   props: {
+    fullHeight: Boolean
   }
 };
 </script>
 
 <style lang="scss" scoped>
 
+.fullHeight, .fullHeight > div
+{
+  height: 100%;
+}
 .box
 {
-  margin: 1em;
+  padding: 1em;
+
+  > div
+  {
     box-shadow: 0 0.1em 1em -0.1em #ccc;
+  }
 }
 
 </style>
