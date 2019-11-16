@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Faq from "./views/Faq.vue";
+import Testimonials from "./views/Testimonials.vue";
 import GridDemo from "./views/GridDemo.vue";
 
 import DnaScrollDown from "@/modules/dna.scrolldown.js";
@@ -39,6 +40,12 @@ var router = new Router({
 			name: "faq",
 			component: Faq,
 			meta: { title: "Frequently asked questions" }
+		},
+		{
+			path: "/testimonials",
+			name: "testimonials",
+			component: Testimonials,
+			meta: { title: "Testimonials" }
 		},
 		{
 			path: "/griddemo",
