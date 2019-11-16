@@ -32,7 +32,7 @@ export default {
     // If no grow then columns don't size to fill the width evenly
     // and instead just take up as much room as they need
     // Use in combination with columns fill property
-    noGrow: Boolean
+    noGrow: Boolean,
   }
 };
 </script>

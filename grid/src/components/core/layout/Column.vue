@@ -25,9 +25,7 @@
       mobileWidth ? 'mob-' + mobileWidth : ''
     ]"
   >
-    <div>
       <slot></slot>
-    </div>
   </div>
 </template>
 

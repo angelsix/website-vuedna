@@ -71,53 +71,53 @@
     </Grid>
 
     <Grid>
-      <Column>1/2</Column>
-      <Column>1/2</Column>
+      <Column><p>1/2</p></Column>
+      <Column><p>1/2</p></Column>
     </Grid>
     <Grid>
-      <Column>1/3</Column>
-      <Column>1/3</Column>
-      <Column>1/3</Column>
+      <Column><p>1/3</p></Column>
+      <Column><p>1/3</p></Column>
+      <Column><p>1/3</p></Column>
     </Grid>
     <Grid>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
     </Grid>
     <Grid>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
     </Grid>
     <Grid>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
     </Grid>
     <Grid>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
     </Grid>
     <Grid>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
     </Grid>
 
     <h1>Fixed Columns</h1>
@@ -147,14 +147,14 @@
     </Grid>
 
     <Grid :columns="5">
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
-      <Column>Column 1/5</Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
+      <Column><p>Column 1/5</p></Column>
     </Grid>
 
     <h1>Wrapped Fixed Columns</h1>
@@ -184,14 +184,14 @@
     </Grid>
 
     <Grid :columns="5" wrap>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
-      <Column>Column 1/5 Wrapped</Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
+      <Column><p>Column 1/5 Wrapped</p></Column>
     </Grid>
 
     <h1>Vertical Alignment</h1>
@@ -218,15 +218,15 @@
     </Grid>
 
     <Grid>
-      <Column :column-width="100">Top</Column>
-      <Column middle>Middle</Column>
-      <Column top>Top</Column>
+      <Column :column-width="100"><p>Top</p></Column>
+      <Column middle><p>Middle</p></Column>
+      <Column top><p>Top</p></Column>
       <Column middle>
         <div class="center-content" style="height: 150px">Middle</div>
       </Column>
-      <Column bottom>Bottom</Column>
-      <Column middle>Middle</Column>
-      <Column :column-width="100">Bottom</Column>
+      <Column bottom><p>Bottom</p></Column>
+      <Column middle><p>Middle</p></Column>
+      <Column :column-width="100"><p>Bottom</p></Column>
     </Grid>
 
     <h1>Centered Grid</h1>
@@ -257,19 +257,19 @@
     </Grid>
 
     <Grid center>
-      <Column>Centered</Column>
+      <Column><p>Centered</p></Column>
     </Grid>
     <Grid center>
-      <Column :column-width="40">Centered</Column>
-      <Column :column-width="40">Centered</Column>
+      <Column :column-width="40"><p>Centered</p></Column>
+      <Column :column-width="40"><p>Centered</p></Column>
     </Grid>
     <Grid center>
-      <Column :column-width="20">Centered</Column>
-      <Column :column-width="20">Centered</Column>
-      <Column :column-width="20">Centered</Column>
+      <Column :column-width="20"><p>Centered</p></Column>
+      <Column :column-width="20"><p>Centered</p></Column>
+      <Column :column-width="20"><p>Centered</p></Column>
     </Grid>
     <Grid center>
-      <Column :column-width="40">Centered</Column>
+      <Column :column-width="40"><p>Centered</p></Column>
     </Grid>
 
     <h1>Nested Grids</h1>
@@ -324,37 +324,37 @@
       <!-- Removes demo column padding so nesting doesn't have double padding -->
       <Column class="no-demo">
         <Grid>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
         </Grid>
         <Grid>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
         </Grid>
         <Grid>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
-          <Column>Grid 1</Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
+          <Column><p>Grid 1</p></Column>
         </Grid>
       </Column>
       <!-- Removes demo column padding so nesting doesn't have double padding -->
       <Column class="no-demo">
         <Grid>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
         </Grid>
         <Grid>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
         </Grid>
         <Grid>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
-          <Column>Another grid</Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
+          <Column><p>Another grid</p></Column>
         </Grid>
       </Column>
     </Grid>
@@ -427,53 +427,53 @@
     </Grid>
 
     <Grid no-gutter>
-      <Column>1/2</Column>
-      <Column>1/2</Column>
+      <Column><p>1/2</p></Column>
+      <Column><p>1/2</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/3</Column>
-      <Column>1/3</Column>
-      <Column>1/3</Column>
+      <Column><p>1/3</p></Column>
+      <Column><p>1/3</p></Column>
+      <Column><p>1/3</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
-      <Column>1/4</Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
+      <Column><p>1/4</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
-      <Column>1/5</Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
+      <Column><p>1/5</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
-      <Column>1/6</Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
+      <Column><p>1/6</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
-      <Column>1/7</Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
+      <Column><p>1/7</p></Column>
     </Grid>
     <Grid no-gutter>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
-      <Column>1/8</Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
+      <Column><p>1/8</p></Column>
     </Grid>
 
     <h1>
@@ -508,16 +508,16 @@
     </Grid>
 
     <Grid>
-      <Column desktop>desktop</Column>
-      <Column laptop>laptop</Column>
-      <Column tablet>tablet</Column>
-      <Column mobile>mobile</Column>
+      <Column desktop><p>desktop</p></Column>
+      <Column laptop><p>laptop</p></Column>
+      <Column tablet><p>tablet</p></Column>
+      <Column mobile><p>mobile</p></Column>
     </Grid>
     <Grid>
-      <Column desktop-hidden>desktop-hidden</Column>
-      <Column laptop-hidden>laptop-hidden</Column>
-      <Column tablet-hidden>tablet-hidden</Column>
-      <Column mobile-hidden>mobile-hidden</Column>
+      <Column desktop-hidden><p>desktop-hidden</p></Column>
+      <Column laptop-hidden><p>laptop-hidden</p></Column>
+      <Column tablet-hidden><p>tablet-hidden</p></Column>
+      <Column mobile-hidden><p>mobile-hidden</p></Column>
     </Grid>
 
     <h1>
@@ -548,12 +548,12 @@
     </Grid>
 
     <Grid center>
-      <Column :column-width="50" :below-desktop-width="100">Width 50% / Below Desktop 100%</Column>
-      <Column :column-width="70" :below-laptop-width="100">Width 70% / Below Laptop 100%</Column>
-      <Column :column-width="60" :desktop-width="100">Width 60% / Desktop 100%</Column>
-      <Column :column-width="60" :laptop-width="100">Width 60% / Laptop 100%</Column>
-      <Column :column-width="60" :tablet-width="100">Width 60% / Tablet 100%</Column>
-      <Column :column-width="60" :mobile-width="100">Width 60% / Mobile 100%</Column>
+      <Column :column-width="50" :below-desktop-width="100"><p>Width 50% / Below Desktop 100%</p></Column>
+      <Column :column-width="70" :below-laptop-width="100"><p>Width 70% / Below Laptop 100%</p></Column>
+      <Column :column-width="60" :desktop-width="100"><p>Width 60% / Desktop 100%</p></Column>
+      <Column :column-width="60" :laptop-width="100"><p>Width 60% / Laptop 100%</p></Column>
+      <Column :column-width="60" :tablet-width="100"><p>Width 60% / Tablet 100%</p></Column>
+      <Column :column-width="60" :mobile-width="100"><p>Width 60% / Mobile 100%</p></Column>
     </Grid>
   </Section>
 </template>
@@ -601,17 +601,19 @@ code {
 
 // Demo column styles
 .demo {
-  .col:not(.no-demo) > div {
+  .col:not(.no-demo) > p, .col:not(.no-demo) > div {
     border: 1px dashed rgba(218, 37, 231, 1);
     text-align: center;
     padding: 1em;
-    display: block;
+    margin-bottom: 0;
   }
+  .col:not(.no-demo) > p { display: block; }
+
 }
 
 // Debug column styles
 .debug {
-  .col > div {
+  .col > * {
     border: 1px dashed green;
   }
 }
