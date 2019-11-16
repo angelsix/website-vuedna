@@ -8,7 +8,7 @@
 
 		<Accordian>
 			<AccordianItem :title="question1">
-				<div class="container" v-html="answer1"></div>
+				<div class="faq-item container" v-html="answer1"></div>
 			</AccordianItem>
 		</Accordian>
 	</Section>
@@ -31,3 +31,9 @@ export default {
 	}
 };
 </script>
+
+<style lang="scss">
+.faq-item em {
+	text-decoration: underline;
+}
+</style>
