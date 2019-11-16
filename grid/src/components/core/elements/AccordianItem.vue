@@ -1,12 +1,11 @@
 <template>
-	<div :class="['box', { fullHeight: fullHeight }]">
-		<div><slot></slot></div>
-	</div>
+	<div></div>
 </template>
 
 <script>
 export default {
-	name: "ShadowBox",
+	name: "AccordianItem",
+	components: {},
 	props: {
 		fullHeight: Boolean
 	}
