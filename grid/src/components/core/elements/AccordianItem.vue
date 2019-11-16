@@ -1,27 +1,68 @@
 <template>
-	<div></div>
+	<div class="accordianItem">
+		<input type="checkbox" :id="this._uid" />
+		<label :for="this._uid">{{ title }}</label>
+		<div>
+			<slot></slot>
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
-	name: "AccordianItem",
-	components: {},
 	props: {
-		fullHeight: Boolean
+		title: String
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.fullHeight,
-.fullHeight > div {
-	height: 100%;
-}
-.box {
-	padding: 1em;
+.accordianItem {
+	--color-accordian-item-background: #efdb00;
+	--color-accordian-item-background-hover: #fff048;
+
+	overflow: hidden;
+
+	input {
+		display: none;
+	}
+
+	input:checked {
+		+ label {
+			background: var(--color-accordian-item-background-hover);
+			&::after {
+				transform: rotate(90deg);
+			}
+		}
+		~ div {
+			max-height: 100vh;
+		}
+	}
+
+	label {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		background: var(--color-accordian-item-background);
+		font-weight: bold;
+		cursor: pointer;
+
+		&:hover {
+			background: var(--color-accordian-item-background-hover);
+		}
+		&::after {
+			content: "\276F";
+			// Set to base line height so rotating stays square
+			width: 1.6em;
+			text-align: center;
+			transition: all 0.35s;
+		}
+	}
 
 	> div {
-		box-shadow: 0 0.1em 1em -0.1em #ccc;
+		max-height: 0;
+		transition: max-height linear 0.35s;
 	}
 }
 </style>

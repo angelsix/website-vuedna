@@ -24,6 +24,7 @@ import BlockCentered from "@/components/core/blocks/BlockCentered.vue";
 import ShadowBox from "@/components/core/elements/ShadowBox.vue";
 import Spacer from "@/components/core/elements/Spacer.vue";
 import Accordian from "@/components/core/elements/Accordian.vue";
+import AccordianItem from "@/components/core/elements/AccordianItem.vue";
 import ImageTextButtonBox from "@/components/ImageTextButtonBox.vue";
 
 Vue.component("Grid", Grid);
@@ -38,6 +39,7 @@ Vue.component("BlockCentered", BlockCentered);
 Vue.component("ShadowBox", ShadowBox);
 Vue.component("Spacer", Spacer);
 Vue.component("Accordian", Accordian);
+Vue.component("AccordianItem", AccordianItem);
 Vue.component("ImageTextButtonBox", ImageTextButtonBox);
 
 new Vue({

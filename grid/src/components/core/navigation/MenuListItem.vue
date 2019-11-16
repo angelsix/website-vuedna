@@ -8,7 +8,6 @@
 
 <script>
 export default {
-	name: "MenuListItem",
 	props: {
 		url: String,
 		// If the column should act as a spacer to fill all unused space

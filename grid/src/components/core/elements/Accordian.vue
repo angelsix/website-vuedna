@@ -1,44 +1,17 @@
+<template>
+	<div class="accordian">
+		<slot></slot>
+	</div>
+</template>
+
 <script>
-export default {
-	name: "Accordian",
-	render(createElement) {
-		// List of all created elements
-		var elements = [];
-
-		// Loop each element in the default slot
-		this.$slots.default.forEach(element => {
-			// Create an item element with the content of the slot inside it
-			elements.push(
-				createElement(
-					// Create a
-					"div",
-					{
-						// Add class accordian
-						attrs: { class: "item" }
-					},
-					// Single element so convert to array
-					[element]
-				)
-			);
-		});
-
-		// Create main wrapper div
-		return createElement(
-			"div",
-			{
-				// Add class accordian
-				attrs: { class: "accordian" }
-			},
-			// Add all created elements from above
-			elements
-		);
-	},
-	props: {}
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .accordian {
-	background: red;
+	border-radius: 1em;
+	overflow: hidden;
+	box-shadow: 0 0 0.4em -0.2em rgba(0, 0, 0, 0.5);
 }
 </style>

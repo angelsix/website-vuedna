@@ -45,7 +45,6 @@
 
 <script>
 export default {
-	name: "NavigationMenu",
 	props: {
 		content: Object
 	},

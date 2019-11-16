@@ -12,7 +12,6 @@
 
 <script>
 export default {
-	name: "ImageTextButtonBox",
 	props: {
 		imagePath: String,
 		imageUrl: String,

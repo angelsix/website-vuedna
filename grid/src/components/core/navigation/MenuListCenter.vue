@@ -20,9 +20,7 @@
 </template>
 
 <script>
-export default {
-	name: "MenuListCenter"
-};
+export default {};
 </script>
 
 <style lang="scss">

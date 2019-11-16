@@ -14,7 +14,6 @@
 
 <script>
 export default {
-	name: "BlockCentered",
 	props: {
 		backgroundImage: String,
 		height: String

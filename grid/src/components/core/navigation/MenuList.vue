@@ -38,7 +38,6 @@
 
 <script>
 export default {
-	name: "MenuList",
 	props: {
 		// The items in the menu
 		links: Array,

@@ -6,7 +6,6 @@
 
 <script>
 export default {
-	name: "ShadowBox",
 	props: {
 		fullHeight: Boolean
 	}

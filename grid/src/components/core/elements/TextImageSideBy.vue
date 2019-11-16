@@ -14,7 +14,6 @@
 
 <script>
 export default {
-	name: "TextImageSideBy",
 	props: {
 		imagePath: String
 	}

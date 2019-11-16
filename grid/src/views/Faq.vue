@@ -6,11 +6,10 @@
 
 		<Spacer double />
 
-		<Accordian vmod>
-			<p>test1</p>
-			<p>test2</p>
-			<p>test3</p>
-			<p>test4</p>
+		<Accordian>
+			<AccordianItem :title="question1">
+				<div class="container" v-html="answer1"></div>
+			</AccordianItem>
 		</Accordian>
 	</Section>
 </template>
@@ -20,7 +19,14 @@ export default {
 	name: "home",
 	data() {
 		return {
-			faqHeaderText: "Frequently Asked Questions"
+			faqHeaderText: "Frequently Asked Questions",
+
+			question1: "Q: How often should I have my chimney swept?",
+			answer1:
+				"<em>Smokeless Coal</em>: At least once a year.<br/>" +
+				"<em>Wood</em>: Quarterly when in use.<br/>" +
+				"<em>Bitumous Coal</em>: Twice a year.<br/>" +
+				"<em>Oil / Gas</em>: Once a year."
 		};
 	}
 };
