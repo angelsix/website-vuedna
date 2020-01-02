@@ -11,7 +11,7 @@ This is a Vue component implementation of the DnaGrid for a nice grid system in 
 
 Go into `grid` folder (and/or open the grid folder in VS Code to work on it).
 
-The `project.json` file contains the npm commands. Open command line in the folder and run the following.
+The package.json` file contains the npm commands. Open command line in the folder and run the following.
 
 ## First build project dependencies install
 ```
